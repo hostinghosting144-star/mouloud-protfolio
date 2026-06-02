@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +12,7 @@
   <title>Mouloud Allouche | Food Quality Control & Agro-Food Specialist</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -38,16 +38,23 @@
         <span class="logo-dot"></span>
       </a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
-        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
-        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
-        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
-        <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
-        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        <li><a href="#home"       class="nav-link active" data-section="home"       data-i18n="nav-home">Home</a></li>
+        <li><a href="#about"      class="nav-link"        data-section="about"      data-i18n="nav-about">About</a></li>
+        <li><a href="#skills"     class="nav-link"        data-section="skills"     data-i18n="nav-skills">Skills</a></li>
+        <li><a href="#experience" class="nav-link"        data-section="experience" data-i18n="nav-experience">Experience</a></li>
+        <li><a href="#education"  class="nav-link"        data-section="education"  data-i18n="nav-education">Education</a></li>
+        <li><a href="#contact"    class="nav-link"        data-section="contact"    data-i18n="nav-contact">Contact</a></li>
       </ul>
       <div class="nav-actions">
+        <!-- Language Switcher -->
+        <div class="lang-switcher" id="lang-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="ar">AR</button>
+        </div>
         <a href="mailto:allouchemouloud06@gmail.com" class="nav-cta" id="nav-hire-btn">
-          <i class="fas fa-envelope"></i> Hire Me
+          <i class="fas fa-envelope"></i>
+          <span data-i18n="nav-hire">Hire Me</span>
         </a>
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
           <span></span><span></span><span></span>
@@ -69,42 +76,44 @@
       <div class="hero-content" data-aos="fade-right">
         <div class="hero-badge">
           <i class="fas fa-flask"></i>
-          <span>Food Quality Specialist</span>
+          <span data-i18n="hero-badge">Food Quality Specialist</span>
         </div>
         <h1 class="hero-title">
-          <span class="hero-greeting">Hello, I'm</span>
+          <span class="hero-greeting" data-i18n="hero-greeting">Hello, I'm</span>
           <span class="hero-name">Mouloud<br /><em>Allouche</em></span>
         </h1>
         <div class="hero-typewriter">
-          <span class="typewriter-static">I specialize in </span>
+          <span class="typewriter-static" data-i18n="hero-typewriter-static">I specialize in </span>
           <span class="typewriter-dynamic" id="typewriter"></span>
           <span class="typewriter-cursor">|</span>
         </div>
-        <p class="hero-description">
+        <p class="hero-description" data-i18n="hero-description">
           Passionate Agro-Food &amp; Quality Control Specialist with a Master's degree and hands-on laboratory expertise in microbiological analysis, food safety, and quality assurance — dedicated to raising industry standards.
         </p>
         <div class="hero-actions">
           <a href="#contact" class="btn btn-primary" id="hero-contact-btn">
-            <i class="fas fa-paper-plane"></i> Get In Touch
+            <i class="fas fa-paper-plane"></i>
+            <span data-i18n="hero-btn-contact">Get In Touch</span>
           </a>
           <a href="#about" class="btn btn-outline" id="hero-about-btn">
-            <i class="fas fa-user"></i> About Me
+            <i class="fas fa-user"></i>
+            <span data-i18n="hero-btn-about">About Me</span>
           </a>
         </div>
         <div class="hero-stats">
           <div class="stat-item">
             <span class="stat-number" data-target="2">0</span><span class="stat-suffix">+</span>
-            <span class="stat-label">Years Experience</span>
+            <span class="stat-label" data-i18n="hero-stat-experience">Years Experience</span>
           </div>
           <div class="stat-divider"></div>
           <div class="stat-item">
             <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
-            <span class="stat-label">Technical Skills</span>
+            <span class="stat-label" data-i18n="hero-stat-skills">Technical Skills</span>
           </div>
           <div class="stat-divider"></div>
           <div class="stat-item">
-            <span class="stat-number" data-target="3">0</span><span class="stat-suffix"></span>
-            <span class="stat-label">Languages Spoken</span>
+            <span class="stat-number" data-target="3">0</span>
+            <span class="stat-label" data-i18n="hero-stat-languages">Languages Spoken</span>
           </div>
         </div>
       </div>
@@ -118,21 +127,21 @@
           </div>
           <div class="hero-badge-float badge-float-1">
             <i class="fas fa-microscope"></i>
-            <span>Microbiology</span>
+            <span data-i18n="badge-float-micro">Microbiology</span>
           </div>
           <div class="hero-badge-float badge-float-2">
             <i class="fas fa-shield-alt"></i>
-            <span>Food Safety</span>
+            <span data-i18n="badge-float-safety">Food Safety</span>
           </div>
           <div class="hero-badge-float badge-float-3">
             <i class="fas fa-award"></i>
-            <span>Master's Degree</span>
+            <span data-i18n="badge-float-degree">Master's Degree</span>
           </div>
         </div>
       </div>
     </div>
     <div class="hero-scroll-indicator">
-      <span>Scroll Down</span>
+      <span data-i18n="hero-scroll">Scroll Down</span>
       <div class="scroll-line"><div class="scroll-dot"></div></div>
     </div>
   </section>
@@ -141,9 +150,9 @@
   <section id="about" class="section about">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <span class="section-tag"><i class="fas fa-user-circle"></i> About Me</span>
-        <h2 class="section-title">Passionate About <em>Food Science</em> & Quality</h2>
-        <p class="section-subtitle">Combining academic rigor with real-world expertise to champion food safety and agro-food innovation.</p>
+        <span class="section-tag"><i class="fas fa-user-circle"></i> <span data-i18n="about-tag">About Me</span></span>
+        <h2 class="section-title" data-i18n-html="about-title">Passionate About <em>Food Science</em> &amp; Quality</h2>
+        <p class="section-subtitle" data-i18n="about-subtitle">Combining academic rigor with real-world expertise to champion food safety and agro-food innovation.</p>
       </div>
       <div class="about-grid">
         <div class="about-image-col" data-aos="fade-right">
@@ -152,83 +161,80 @@
             <div class="about-img-badge">
               <i class="fas fa-graduation-cap"></i>
               <div>
-                <strong>Master's Degree</strong>
-                <span>Agro-Food & Quality Control</span>
+                <strong data-i18n="about-degree-title">Master's Degree</strong>
+                <span data-i18n="about-degree-sub">Agro-Food &amp; Quality Control</span>
               </div>
             </div>
           </div>
           <div class="about-location-card">
             <i class="fas fa-map-marker-alt"></i>
             <div>
-              <strong>Location</strong>
+              <strong data-i18n="about-location-label">Location</strong>
               <span>Tiaret, Algeria</span>
             </div>
           </div>
         </div>
         <div class="about-content-col" data-aos="fade-left">
-          <h3 class="about-heading">Food Quality Control &amp; Agro-Food Specialist</h3>
-          <p class="about-text">
+          <h3 class="about-heading" data-i18n="about-heading">Food Quality Control &amp; Agro-Food Specialist</h3>
+          <p class="about-text" data-i18n="about-text-1">
             I am a dedicated Food Quality Control and Agro-Food Specialist holding a Master's degree from the University Ibn Khaldoun, Tiaret. My academic training and practical laboratory internship have equipped me with deep competencies in microbiological and biochemical analysis, thermal treatment evaluation, and product conformity inspection.
           </p>
-          <p class="about-text">
+          <p class="about-text" data-i18n="about-text-2">
             I am deeply committed to food safety standards and continuous improvement in quality assurance processes. My multidisciplinary background — spanning food science, technology, and current French language studies — reflects my drive for lifelong learning and professional growth.
           </p>
           <div class="about-info-grid">
             <div class="info-item">
               <i class="fas fa-envelope"></i>
               <div>
-                <span class="info-label">Email</span>
+                <span class="info-label" data-i18n="about-info-email-label">Email</span>
                 <a href="mailto:allouchemouloud06@gmail.com" class="info-value">allouchemouloud06@gmail.com</a>
               </div>
             </div>
             <div class="info-item">
               <i class="fas fa-phone"></i>
               <div>
-                <span class="info-label">Phone</span>
+                <span class="info-label" data-i18n="about-info-phone-label">Phone</span>
                 <a href="tel:+213673533631" class="info-value">+213 673 533 631</a>
               </div>
             </div>
             <div class="info-item">
               <i class="fas fa-map-marker-alt"></i>
               <div>
-                <span class="info-label">Location</span>
+                <span class="info-label" data-i18n="about-info-location-label">Location</span>
                 <span class="info-value">Tiaret, Algeria</span>
               </div>
             </div>
             <div class="info-item">
               <i class="fas fa-language"></i>
               <div>
-                <span class="info-label">Languages</span>
-                <span class="info-value">Arabic · French · English</span>
+                <span class="info-label" data-i18n="about-info-languages-label">Languages</span>
+                <span class="info-value" data-i18n="about-info-languages-value">Arabic · French · English</span>
               </div>
             </div>
           </div>
           <div class="about-languages">
-            <h4>Language Proficiency</h4>
+            <h4 data-i18n="about-lang-title">Language Proficiency</h4>
             <div class="lang-bars">
               <div class="lang-bar-item">
                 <div class="lang-bar-header">
-                  <span>Arabic</span><span class="lang-level">Native</span>
+                  <span data-i18n="lang-arabic-name">Arabic</span>
+                  <span class="lang-level" data-i18n="lang-arabic-level">Native</span>
                 </div>
-                <div class="lang-bar-track">
-                  <div class="lang-bar-fill" data-width="100"></div>
-                </div>
+                <div class="lang-bar-track"><div class="lang-bar-fill" data-width="100"></div></div>
               </div>
               <div class="lang-bar-item">
                 <div class="lang-bar-header">
-                  <span>French</span><span class="lang-level">Fluent</span>
+                  <span data-i18n="lang-french-name">French</span>
+                  <span class="lang-level" data-i18n="lang-french-level">Fluent</span>
                 </div>
-                <div class="lang-bar-track">
-                  <div class="lang-bar-fill" data-width="85"></div>
-                </div>
+                <div class="lang-bar-track"><div class="lang-bar-fill" data-width="85"></div></div>
               </div>
               <div class="lang-bar-item">
                 <div class="lang-bar-header">
-                  <span>English</span><span class="lang-level">Intermediate</span>
+                  <span data-i18n="lang-english-name">English</span>
+                  <span class="lang-level" data-i18n="lang-english-level">Intermediate</span>
                 </div>
-                <div class="lang-bar-track">
-                  <div class="lang-bar-fill" data-width="60"></div>
-                </div>
+                <div class="lang-bar-track"><div class="lang-bar-fill" data-width="60"></div></div>
               </div>
             </div>
           </div>
@@ -241,18 +247,18 @@
   <section id="skills" class="section skills">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <span class="section-tag"><i class="fas fa-cogs"></i> Technical Skills</span>
-        <h2 class="section-title">My Areas of <em>Expertise</em></h2>
-        <p class="section-subtitle">A comprehensive set of competencies developed through academic training and hands-on laboratory experience.</p>
+        <span class="section-tag"><i class="fas fa-cogs"></i> <span data-i18n="skills-tag">Technical Skills</span></span>
+        <h2 class="section-title" data-i18n-html="skills-title">My Areas of <em>Expertise</em></h2>
+        <p class="section-subtitle" data-i18n="skills-subtitle">A comprehensive set of competencies developed through academic training and hands-on laboratory experience.</p>
       </div>
       <div class="skills-grid" data-aos="fade-up" data-aos-delay="100">
 
         <div class="skill-card" id="skill-fqc">
           <div class="skill-card-icon"><i class="fas fa-search"></i></div>
-          <h3>Food Quality Control</h3>
-          <p>Systematic inspection and assessment of food products to verify compliance with established specifications and regulatory standards.</p>
+          <h3 data-i18n="skill-fqc-name">Food Quality Control</h3>
+          <p data-i18n="skill-fqc-desc">Systematic inspection and assessment of food products to verify compliance with established specifications and regulatory standards.</p>
           <div class="skill-card-level">
-            <span>Proficiency</span>
+            <span data-i18n="skill-proficiency">Proficiency</span>
             <div class="skill-progress-bar"><div class="skill-progress-fill" data-width="92"></div></div>
             <span class="skill-pct">92%</span>
           </div>
@@ -260,10 +266,10 @@
 
         <div class="skill-card" id="skill-fs">
           <div class="skill-card-icon"><i class="fas fa-shield-alt"></i></div>
-          <h3>Food Safety</h3>
-          <p>Application of HACCP principles and food safety management systems to prevent contamination and ensure consumer protection.</p>
+          <h3 data-i18n="skill-fs-name">Food Safety</h3>
+          <p data-i18n="skill-fs-desc">Application of HACCP principles and food safety management systems to prevent contamination and ensure consumer protection.</p>
           <div class="skill-card-level">
-            <span>Proficiency</span>
+            <span data-i18n="skill-proficiency">Proficiency</span>
             <div class="skill-progress-bar"><div class="skill-progress-fill" data-width="90"></div></div>
             <span class="skill-pct">90%</span>
           </div>
@@ -271,10 +277,10 @@
 
         <div class="skill-card" id="skill-qa">
           <div class="skill-card-icon"><i class="fas fa-certificate"></i></div>
-          <h3>Quality Assurance</h3>
-          <p>Development and implementation of quality systems to consistently deliver products that meet customer and regulatory requirements.</p>
+          <h3 data-i18n="skill-qa-name">Quality Assurance</h3>
+          <p data-i18n="skill-qa-desc">Development and implementation of quality systems to consistently deliver products that meet customer and regulatory requirements.</p>
           <div class="skill-card-level">
-            <span>Proficiency</span>
+            <span data-i18n="skill-proficiency">Proficiency</span>
             <div class="skill-progress-bar"><div class="skill-progress-fill" data-width="88"></div></div>
             <span class="skill-pct">88%</span>
           </div>
@@ -282,10 +288,10 @@
 
         <div class="skill-card" id="skill-micro">
           <div class="skill-card-icon"><i class="fas fa-microscope"></i></div>
-          <h3>Microbiological Analysis</h3>
-          <p>Identification and quantification of microorganisms in food matrices including bacterial cultures, colony counting, and pathogen detection.</p>
+          <h3 data-i18n="skill-micro-name">Microbiological Analysis</h3>
+          <p data-i18n="skill-micro-desc">Identification and quantification of microorganisms in food matrices including bacterial cultures, colony counting, and pathogen detection.</p>
           <div class="skill-card-level">
-            <span>Proficiency</span>
+            <span data-i18n="skill-proficiency">Proficiency</span>
             <div class="skill-progress-bar"><div class="skill-progress-fill" data-width="87"></div></div>
             <span class="skill-pct">87%</span>
           </div>
@@ -293,10 +299,10 @@
 
         <div class="skill-card" id="skill-bio">
           <div class="skill-card-icon"><i class="fas fa-flask"></i></div>
-          <h3>Biochemical Analysis</h3>
-          <p>Determination of nutritional composition, enzymatic activity, and physicochemical properties of food samples using standardized methods.</p>
+          <h3 data-i18n="skill-bio-name">Biochemical Analysis</h3>
+          <p data-i18n="skill-bio-desc">Determination of nutritional composition, enzymatic activity, and physicochemical properties of food samples using standardized methods.</p>
           <div class="skill-card-level">
-            <span>Proficiency</span>
+            <span data-i18n="skill-proficiency">Proficiency</span>
             <div class="skill-progress-bar"><div class="skill-progress-fill" data-width="85"></div></div>
             <span class="skill-pct">85%</span>
           </div>
@@ -304,10 +310,10 @@
 
         <div class="skill-card" id="skill-lab">
           <div class="skill-card-icon"><i class="fas fa-vials"></i></div>
-          <h3>Laboratory Techniques</h3>
-          <p>Proficient in a wide range of analytical laboratory procedures, equipment operation, sample preparation, and result interpretation.</p>
+          <h3 data-i18n="skill-lab-name">Laboratory Techniques</h3>
+          <p data-i18n="skill-lab-desc">Proficient in a wide range of analytical laboratory procedures, equipment operation, sample preparation, and result interpretation.</p>
           <div class="skill-card-level">
-            <span>Proficiency</span>
+            <span data-i18n="skill-proficiency">Proficiency</span>
             <div class="skill-progress-bar"><div class="skill-progress-fill" data-width="88"></div></div>
             <span class="skill-pct">88%</span>
           </div>
@@ -315,10 +321,10 @@
 
         <div class="skill-card" id="skill-pi">
           <div class="skill-card-icon"><i class="fas fa-clipboard-check"></i></div>
-          <h3>Product Inspection</h3>
-          <p>Rigorous evaluation of product conformity through visual, sensory, and instrumental inspection at every stage of the production cycle.</p>
+          <h3 data-i18n="skill-pi-name">Product Inspection</h3>
+          <p data-i18n="skill-pi-desc">Rigorous evaluation of product conformity through visual, sensory, and instrumental inspection at every stage of the production cycle.</p>
           <div class="skill-card-level">
-            <span>Proficiency</span>
+            <span data-i18n="skill-proficiency">Proficiency</span>
             <div class="skill-progress-bar"><div class="skill-progress-fill" data-width="90"></div></div>
             <span class="skill-pct">90%</span>
           </div>
@@ -326,10 +332,10 @@
 
         <div class="skill-card" id="skill-fp">
           <div class="skill-card-icon"><i class="fas fa-industry"></i></div>
-          <h3>Food Processing</h3>
-          <p>Understanding of thermal treatments, preservation methods, and processing technologies that impact product quality and shelf life.</p>
+          <h3 data-i18n="skill-fp-name">Food Processing</h3>
+          <p data-i18n="skill-fp-desc">Understanding of thermal treatments, preservation methods, and processing technologies that impact product quality and shelf life.</p>
           <div class="skill-card-level">
-            <span>Proficiency</span>
+            <span data-i18n="skill-proficiency">Proficiency</span>
             <div class="skill-progress-bar"><div class="skill-progress-fill" data-width="82"></div></div>
             <span class="skill-pct">82%</span>
           </div>
@@ -337,10 +343,10 @@
 
         <div class="skill-card" id="skill-doc">
           <div class="skill-card-icon"><i class="fas fa-file-alt"></i></div>
-          <h3>Documentation & Reporting</h3>
-          <p>Accurate preparation of laboratory reports, non-conformance records, audit findings, and quality control documentation.</p>
+          <h3 data-i18n="skill-doc-name">Documentation &amp; Reporting</h3>
+          <p data-i18n="skill-doc-desc">Accurate preparation of laboratory reports, non-conformance records, audit findings, and quality control documentation.</p>
           <div class="skill-card-level">
-            <span>Proficiency</span>
+            <span data-i18n="skill-proficiency">Proficiency</span>
             <div class="skill-progress-bar"><div class="skill-progress-fill" data-width="85"></div></div>
             <span class="skill-pct">85%</span>
           </div>
@@ -348,10 +354,10 @@
 
         <div class="skill-card" id="skill-rd">
           <div class="skill-card-icon"><i class="fas fa-atom"></i></div>
-          <h3>Research & Development</h3>
-          <p>Contribution to R&D initiatives focused on food innovation, quality improvement, and development of new analytical protocols.</p>
+          <h3 data-i18n="skill-rd-name">Research &amp; Development</h3>
+          <p data-i18n="skill-rd-desc">Contribution to R&amp;D initiatives focused on food innovation, quality improvement, and development of new analytical protocols.</p>
           <div class="skill-card-level">
-            <span>Proficiency</span>
+            <span data-i18n="skill-proficiency">Proficiency</span>
             <div class="skill-progress-bar"><div class="skill-progress-fill" data-width="80"></div></div>
             <span class="skill-pct">80%</span>
           </div>
@@ -365,79 +371,91 @@
   <section id="experience" class="section experience">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <span class="section-tag"><i class="fas fa-briefcase"></i> Experience</span>
-        <h2 class="section-title">Professional <em>Journey</em></h2>
-        <p class="section-subtitle">A diverse career path spanning food science, engineering, and business — each role sharpening a unique set of competencies.</p>
+        <span class="section-tag"><i class="fas fa-briefcase"></i> <span data-i18n="exp-tag">Experience</span></span>
+        <h2 class="section-title" data-i18n-html="exp-title">Professional <em>Journey</em></h2>
+        <p class="section-subtitle" data-i18n="exp-subtitle">A diverse career path spanning food science, engineering, and business — each role sharpening a unique set of competencies.</p>
       </div>
       <div class="timeline">
 
+        <!-- Job 1 -->
         <div class="timeline-item timeline-left" data-aos="fade-right">
           <div class="timeline-connector">
             <div class="timeline-dot current"><i class="fas fa-store"></i></div>
           </div>
           <div class="timeline-card">
             <div class="timeline-card-header">
-              <div class="timeline-badge timeline-badge-current">Current</div>
-              <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Aug 2023 – Present</span>
+              <div class="timeline-badge timeline-badge-current" data-i18n="exp-badge-current">Current</div>
+              <span class="timeline-date"><i class="fas fa-calendar-alt"></i> <span data-i18n="job1-date">Aug 2023 – Present</span></span>
             </div>
-            <h3 class="timeline-role">Assistant Manager</h3>
+            <h3 class="timeline-role" data-i18n="job1-role">Assistant Manager</h3>
             <span class="timeline-company"><i class="fas fa-building"></i> E-Tech Compus</span>
-            <p class="timeline-description">Leading daily business operations of a technology retail outlet specializing in mobile and computer accessories, IT services, and customer support.</p>
+            <p class="timeline-description" data-i18n="job1-desc">Leading daily business operations of a technology retail outlet specializing in mobile and computer accessories, IT services, and customer support.</p>
             <ul class="timeline-duties">
-              <li><i class="fas fa-check-circle"></i> Mobile and computer accessories retail management</li>
-              <li><i class="fas fa-check-circle"></i> Electronic and IT services coordination</li>
-              <li><i class="fas fa-check-circle"></i> Customer support and satisfaction management</li>
-              <li><i class="fas fa-check-circle"></i> Business operations and inventory oversight</li>
+              <li><i class="fas fa-check-circle"></i> <span data-i18n="job1-duty-1">Mobile and computer accessories retail management</span></li>
+              <li><i class="fas fa-check-circle"></i> <span data-i18n="job1-duty-2">Electronic and IT services coordination</span></li>
+              <li><i class="fas fa-check-circle"></i> <span data-i18n="job1-duty-3">Customer support and satisfaction management</span></li>
+              <li><i class="fas fa-check-circle"></i> <span data-i18n="job1-duty-4">Business operations and inventory oversight</span></li>
             </ul>
             <div class="timeline-tags">
-              <span>Management</span><span>Retail</span><span>IT Services</span><span>Customer Relations</span>
+              <span data-i18n="job1-tag-1">Management</span>
+              <span data-i18n="job1-tag-2">Retail</span>
+              <span data-i18n="job1-tag-3">IT Services</span>
+              <span data-i18n="job1-tag-4">Customer Relations</span>
             </div>
           </div>
         </div>
 
+        <!-- Job 2 -->
         <div class="timeline-item timeline-right" data-aos="fade-left">
           <div class="timeline-connector">
             <div class="timeline-dot"><i class="fas fa-tools"></i></div>
           </div>
           <div class="timeline-card">
             <div class="timeline-card-header">
-              <span class="timeline-date"><i class="fas fa-calendar-alt"></i> May 2022 – Aug 2023</span>
+              <span class="timeline-date"><i class="fas fa-calendar-alt"></i> <span data-i18n="job2-date">May 2022 – Aug 2023</span></span>
             </div>
-            <h3 class="timeline-role">Electromechanical Elevator Technician</h3>
+            <h3 class="timeline-role" data-i18n="job2-role">Electromechanical Elevator Technician</h3>
             <span class="timeline-company"><i class="fas fa-building"></i> AF Ascenseur</span>
-            <p class="timeline-description">Performed comprehensive installation, commissioning, and programming of elevator systems, demonstrating strong technical aptitude and attention to safety standards.</p>
+            <p class="timeline-description" data-i18n="job2-desc">Performed comprehensive installation, commissioning, and programming of elevator systems, demonstrating strong technical aptitude and attention to safety standards.</p>
             <ul class="timeline-duties">
-              <li><i class="fas fa-check-circle"></i> Mechanical assembly of elevator components</li>
-              <li><i class="fas fa-check-circle"></i> Electrical installation and wiring</li>
-              <li><i class="fas fa-check-circle"></i> Elevator programming and system commissioning</li>
-              <li><i class="fas fa-check-circle"></i> Safety compliance and quality verification</li>
+              <li><i class="fas fa-check-circle"></i> <span data-i18n="job2-duty-1">Mechanical assembly of elevator components</span></li>
+              <li><i class="fas fa-check-circle"></i> <span data-i18n="job2-duty-2">Electrical installation and wiring</span></li>
+              <li><i class="fas fa-check-circle"></i> <span data-i18n="job2-duty-3">Elevator programming and system commissioning</span></li>
+              <li><i class="fas fa-check-circle"></i> <span data-i18n="job2-duty-4">Safety compliance and quality verification</span></li>
             </ul>
             <div class="timeline-tags">
-              <span>Electromechanics</span><span>Installation</span><span>Programming</span><span>Safety</span>
+              <span data-i18n="job2-tag-1">Electromechanics</span>
+              <span data-i18n="job2-tag-2">Installation</span>
+              <span data-i18n="job2-tag-3">Programming</span>
+              <span data-i18n="job2-tag-4">Safety</span>
             </div>
           </div>
         </div>
 
+        <!-- Job 3 -->
         <div class="timeline-item timeline-left" data-aos="fade-right">
           <div class="timeline-connector">
             <div class="timeline-dot internship"><i class="fas fa-microscope"></i></div>
           </div>
           <div class="timeline-card">
             <div class="timeline-card-header">
-              <div class="timeline-badge timeline-badge-internship">Internship</div>
-              <span class="timeline-date"><i class="fas fa-calendar-alt"></i> Feb 2022 – Mar 2022</span>
+              <div class="timeline-badge timeline-badge-internship" data-i18n="exp-badge-internship">Internship</div>
+              <span class="timeline-date"><i class="fas fa-calendar-alt"></i> <span data-i18n="job3-date">Feb 2022 – Mar 2022</span></span>
             </div>
-            <h3 class="timeline-role">Quality Control Laboratory Technician</h3>
-            <span class="timeline-company"><i class="fas fa-flask"></i> Microbiology Laboratory</span>
-            <p class="timeline-description">Conducted rigorous microbiological and biochemical laboratory analyses on dairy products, applying academic knowledge to real-world quality control processes.</p>
+            <h3 class="timeline-role" data-i18n="job3-role">Quality Control Laboratory Technician</h3>
+            <span class="timeline-company"><i class="fas fa-flask"></i> <span data-i18n="job3-company">Microbiology Laboratory</span></span>
+            <p class="timeline-description" data-i18n="job3-desc">Conducted rigorous microbiological and biochemical laboratory analyses on dairy products, applying academic knowledge to real-world quality control processes.</p>
             <ul class="timeline-duties">
-              <li><i class="fas fa-check-circle"></i> Microbiological analysis of milk powder samples</li>
-              <li><i class="fas fa-check-circle"></i> Biochemical analysis of milk powder samples</li>
-              <li><i class="fas fa-check-circle"></i> Thermal treatment studies on raw cow milk</li>
-              <li><i class="fas fa-check-circle"></i> Product quality and conformity inspection</li>
+              <li><i class="fas fa-check-circle"></i> <span data-i18n="job3-duty-1">Microbiological analysis of milk powder samples</span></li>
+              <li><i class="fas fa-check-circle"></i> <span data-i18n="job3-duty-2">Biochemical analysis of milk powder samples</span></li>
+              <li><i class="fas fa-check-circle"></i> <span data-i18n="job3-duty-3">Thermal treatment studies on raw cow milk</span></li>
+              <li><i class="fas fa-check-circle"></i> <span data-i18n="job3-duty-4">Product quality and conformity inspection</span></li>
             </ul>
             <div class="timeline-tags">
-              <span>Microbiology</span><span>Biochemistry</span><span>Dairy Analysis</span><span>QC</span>
+              <span data-i18n="job3-tag-1">Microbiology</span>
+              <span data-i18n="job3-tag-2">Biochemistry</span>
+              <span data-i18n="job3-tag-3">Dairy Analysis</span>
+              <span data-i18n="job3-tag-4">QC</span>
             </div>
           </div>
         </div>
@@ -450,52 +468,52 @@
   <section id="education" class="section education">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <span class="section-tag"><i class="fas fa-graduation-cap"></i> Education</span>
-        <h2 class="section-title">Academic <em>Background</em></h2>
-        <p class="section-subtitle">A strong foundation in food science, quality control, and continuous academic development.</p>
+        <span class="section-tag"><i class="fas fa-graduation-cap"></i> <span data-i18n="edu-tag">Education</span></span>
+        <h2 class="section-title" data-i18n-html="edu-title">Academic <em>Background</em></h2>
+        <p class="section-subtitle" data-i18n="edu-subtitle">A strong foundation in food science, quality control, and continuous academic development.</p>
       </div>
       <div class="edu-grid">
 
         <div class="edu-card edu-card-featured" data-aos="fade-up" data-aos-delay="0">
           <div class="edu-card-glow"></div>
           <div class="edu-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
-          <div class="edu-badge">Master's Degree</div>
-          <h3 class="edu-degree">Agro-Food and Quality Control</h3>
-          <span class="edu-institution"><i class="fas fa-university"></i> University Ibn Khaldoun, Tiaret</span>
-          <span class="edu-period"><i class="fas fa-calendar-alt"></i> 2020 – 2022</span>
-          <p class="edu-description">Advanced specialization in food science covering quality management systems, analytical techniques, food processing technology, and regulatory compliance in the agro-food industry.</p>
+          <div class="edu-badge" data-i18n="edu1-badge">Master's Degree</div>
+          <h3 class="edu-degree" data-i18n="edu1-degree">Agro-Food and Quality Control</h3>
+          <span class="edu-institution"><i class="fas fa-university"></i> <span data-i18n="edu1-institution">University Ibn Khaldoun, Tiaret</span></span>
+          <span class="edu-period"><i class="fas fa-calendar-alt"></i> <span data-i18n="edu1-period">2020 – 2022</span></span>
+          <p class="edu-description" data-i18n="edu1-desc">Advanced specialization in food science covering quality management systems, analytical techniques, food processing technology, and regulatory compliance in the agro-food industry.</p>
           <div class="edu-highlights">
-            <span><i class="fas fa-star"></i> Quality Systems</span>
-            <span><i class="fas fa-star"></i> Food Analysis</span>
-            <span><i class="fas fa-star"></i> Research Methods</span>
+            <span><i class="fas fa-star"></i> <span data-i18n="edu1-h1">Quality Systems</span></span>
+            <span><i class="fas fa-star"></i> <span data-i18n="edu1-h2">Food Analysis</span></span>
+            <span><i class="fas fa-star"></i> <span data-i18n="edu1-h3">Research Methods</span></span>
           </div>
         </div>
 
         <div class="edu-card" data-aos="fade-up" data-aos-delay="100">
           <div class="edu-icon-wrap"><i class="fas fa-microscope"></i></div>
-          <div class="edu-badge edu-badge-secondary">Bachelor's Degree</div>
-          <h3 class="edu-degree">Food Technology and Control</h3>
-          <span class="edu-institution"><i class="fas fa-university"></i> University Ibn Khaldoun, Tiaret</span>
-          <span class="edu-period"><i class="fas fa-calendar-alt"></i> 2016 – 2020</span>
-          <p class="edu-description">Comprehensive study of food technology principles, quality control methodologies, food chemistry, and laboratory practices essential for the agro-food sector.</p>
+          <div class="edu-badge edu-badge-secondary" data-i18n="edu2-badge">Bachelor's Degree</div>
+          <h3 class="edu-degree" data-i18n="edu2-degree">Food Technology and Control</h3>
+          <span class="edu-institution"><i class="fas fa-university"></i> <span data-i18n="edu2-institution">University Ibn Khaldoun, Tiaret</span></span>
+          <span class="edu-period"><i class="fas fa-calendar-alt"></i> <span data-i18n="edu2-period">2016 – 2020</span></span>
+          <p class="edu-description" data-i18n="edu2-desc">Comprehensive study of food technology principles, quality control methodologies, food chemistry, and laboratory practices essential for the agro-food sector.</p>
           <div class="edu-highlights">
-            <span><i class="fas fa-star"></i> Food Technology</span>
-            <span><i class="fas fa-star"></i> Lab Practices</span>
-            <span><i class="fas fa-star"></i> Food Chemistry</span>
+            <span><i class="fas fa-star"></i> <span data-i18n="edu2-h1">Food Technology</span></span>
+            <span><i class="fas fa-star"></i> <span data-i18n="edu2-h2">Lab Practices</span></span>
+            <span><i class="fas fa-star"></i> <span data-i18n="edu2-h3">Food Chemistry</span></span>
           </div>
         </div>
 
         <div class="edu-card" data-aos="fade-up" data-aos-delay="200">
           <div class="edu-icon-wrap"><i class="fas fa-school"></i></div>
-          <div class="edu-badge edu-badge-secondary">Baccalaureate</div>
-          <h3 class="edu-degree">Experimental Sciences</h3>
-          <span class="edu-institution"><i class="fas fa-landmark"></i> Ministry of National Education, Tiaret</span>
-          <span class="edu-period"><i class="fas fa-calendar-alt"></i> 2018</span>
-          <p class="edu-description">Scientific baccalaureate with a focus on experimental sciences, building a solid foundation in biology, chemistry, and physics that underpins further specialization in food science.</p>
+          <div class="edu-badge edu-badge-secondary" data-i18n="edu3-badge">Baccalaureate</div>
+          <h3 class="edu-degree" data-i18n="edu3-degree">Experimental Sciences</h3>
+          <span class="edu-institution"><i class="fas fa-landmark"></i> <span data-i18n="edu3-institution">Ministry of National Education, Tiaret</span></span>
+          <span class="edu-period"><i class="fas fa-calendar-alt"></i> <span data-i18n="edu3-period">2018</span></span>
+          <p class="edu-description" data-i18n="edu3-desc">Scientific baccalaureate with a focus on experimental sciences, building a solid foundation in biology, chemistry, and physics that underpins further specialization in food science.</p>
           <div class="edu-highlights">
-            <span><i class="fas fa-star"></i> Biology</span>
-            <span><i class="fas fa-star"></i> Chemistry</span>
-            <span><i class="fas fa-star"></i> Physics</span>
+            <span><i class="fas fa-star"></i> <span data-i18n="edu3-h1">Biology</span></span>
+            <span><i class="fas fa-star"></i> <span data-i18n="edu3-h2">Chemistry</span></span>
+            <span><i class="fas fa-star"></i> <span data-i18n="edu3-h3">Physics</span></span>
           </div>
         </div>
 
@@ -503,16 +521,16 @@
           <div class="edu-card-glow edu-card-glow-active"></div>
           <div class="edu-icon-wrap"><i class="fas fa-book-open"></i></div>
           <div class="edu-badge edu-badge-active">
-            <span class="pulse-dot"></span> Currently Studying
+            <span class="pulse-dot"></span> <span data-i18n="edu4-badge">Currently Studying</span>
           </div>
-          <h3 class="edu-degree">French Language (Third Year)</h3>
-          <span class="edu-institution"><i class="fas fa-university"></i> University Ibn Khaldoun, Tiaret</span>
-          <span class="edu-period"><i class="fas fa-calendar-alt"></i> 2025 – Present</span>
-          <p class="edu-description">Pursuing an advanced Bachelor's degree in French Language to strengthen multilingual communication skills and enhance professional opportunities in French-speaking markets.</p>
+          <h3 class="edu-degree" data-i18n="edu4-degree">French Language (Third Year)</h3>
+          <span class="edu-institution"><i class="fas fa-university"></i> <span data-i18n="edu4-institution">University Ibn Khaldoun, Tiaret</span></span>
+          <span class="edu-period"><i class="fas fa-calendar-alt"></i> <span data-i18n="edu4-period">2025 – Present</span></span>
+          <p class="edu-description" data-i18n="edu4-desc">Pursuing an advanced Bachelor's degree in French Language to strengthen multilingual communication skills and enhance professional opportunities in French-speaking markets.</p>
           <div class="edu-highlights">
-            <span><i class="fas fa-star"></i> Linguistics</span>
-            <span><i class="fas fa-star"></i> Literature</span>
-            <span><i class="fas fa-star"></i> Communication</span>
+            <span><i class="fas fa-star"></i> <span data-i18n="edu4-h1">Linguistics</span></span>
+            <span><i class="fas fa-star"></i> <span data-i18n="edu4-h2">Literature</span></span>
+            <span><i class="fas fa-star"></i> <span data-i18n="edu4-h3">Communication</span></span>
           </div>
         </div>
 
@@ -524,19 +542,19 @@
   <section id="contact" class="section contact">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <span class="section-tag"><i class="fas fa-envelope"></i> Contact</span>
-        <h2 class="section-title">Let's Work <em>Together</em></h2>
-        <p class="section-subtitle">Interested in collaborating or have a project in mind? I'd love to hear from you.</p>
+        <span class="section-tag"><i class="fas fa-envelope"></i> <span data-i18n="contact-tag">Contact</span></span>
+        <h2 class="section-title" data-i18n-html="contact-title">Let's Work <em>Together</em></h2>
+        <p class="section-subtitle" data-i18n="contact-subtitle">Interested in collaborating or have a project in mind? I'd love to hear from you.</p>
       </div>
       <div class="contact-grid">
         <div class="contact-info-col" data-aos="fade-right">
-          <h3 class="contact-info-title">Get In Touch</h3>
-          <p class="contact-info-text">Whether you're looking for a dedicated food quality specialist, want to discuss agro-food innovation, or simply want to connect — my inbox is always open.</p>
+          <h3 class="contact-info-title" data-i18n="contact-info-title">Get In Touch</h3>
+          <p class="contact-info-text" data-i18n="contact-info-text">Whether you're looking for a dedicated food quality specialist, want to discuss agro-food innovation, or simply want to connect — my inbox is always open.</p>
           <div class="contact-cards">
             <a href="mailto:allouchemouloud06@gmail.com" class="contact-card" id="contact-email-card">
               <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
               <div class="contact-card-info">
-                <span class="contact-card-label">Email</span>
+                <span class="contact-card-label" data-i18n="contact-email-label">Email</span>
                 <span class="contact-card-value">allouchemouloud06@gmail.com</span>
               </div>
               <i class="fas fa-arrow-right contact-card-arrow"></i>
@@ -544,7 +562,7 @@
             <a href="tel:+213673533631" class="contact-card" id="contact-phone-card">
               <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
               <div class="contact-card-info">
-                <span class="contact-card-label">Phone</span>
+                <span class="contact-card-label" data-i18n="contact-phone-label">Phone</span>
                 <span class="contact-card-value">+213 673 533 631</span>
               </div>
               <i class="fas fa-arrow-right contact-card-arrow"></i>
@@ -552,7 +570,7 @@
             <div class="contact-card" id="contact-location-card">
               <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
               <div class="contact-card-info">
-                <span class="contact-card-label">Location</span>
+                <span class="contact-card-label" data-i18n="contact-location-label">Location</span>
                 <span class="contact-card-value">Tiaret, Algeria</span>
               </div>
               <i class="fas fa-location-dot contact-card-arrow"></i>
@@ -560,10 +578,50 @@
           </div>
           <div class="contact-availability">
             <div class="availability-dot"></div>
-            <span>Available for new opportunities</span>
+            <span data-i18n="contact-availability">Available for new opportunities</span>
           </div>
         </div>
-       
+
+        <!-- CONTACT FORM -->
+        <div class="contact-form-col" data-aos="fade-left">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-name" data-i18n="form-name-label">Full Name</label>
+                <div class="input-wrap">
+                  <i class="fas fa-user"></i>
+                  <input type="text" id="form-name" name="name" data-i18n-placeholder="form-name-placeholder" placeholder="Your full name" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="form-email" data-i18n="form-email-label">Email Address</label>
+                <div class="input-wrap">
+                  <i class="fas fa-envelope"></i>
+                  <input type="email" id="form-email" name="email" data-i18n-placeholder="form-email-placeholder" placeholder="your@email.com" required />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="form-subject" data-i18n="form-subject-label">Subject</label>
+              <div class="input-wrap">
+                <i class="fas fa-tag"></i>
+                <input type="text" id="form-subject" name="subject" data-i18n-placeholder="form-subject-placeholder" placeholder="How can I help you?" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="form-message" data-i18n="form-message-label">Message</label>
+              <div class="input-wrap input-wrap-textarea">
+                <i class="fas fa-comment"></i>
+                <textarea id="form-message" name="message" data-i18n-placeholder="form-message-placeholder" placeholder="Tell me about your project or opportunity..." rows="5" required></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="form-submit-btn">
+              <i class="fas fa-paper-plane"></i>
+              <span data-i18n="form-submit">Send Message</span>
+            </button>
+            <div class="form-feedback" id="form-feedback"></div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -574,21 +632,21 @@
       <div class="footer-top">
         <div class="footer-brand">
           <span class="footer-logo">MA<span class="footer-logo-dot">.</span></span>
-          <p class="footer-tagline">Food Quality Control &amp; Agro-Food Specialist<br />Tiaret, Algeria</p>
+          <p class="footer-tagline" data-i18n="footer-tagline">Food Quality Control &amp; Agro-Food Specialist<br />Tiaret, Algeria</p>
         </div>
         <div class="footer-links-col">
-          <h4>Navigation</h4>
+          <h4 data-i18n="footer-nav-title">Navigation</h4>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home"       data-i18n="nav-home">Home</a></li>
+            <li><a href="#about"      data-i18n="nav-about">About</a></li>
+            <li><a href="#skills"     data-i18n="nav-skills">Skills</a></li>
+            <li><a href="#experience" data-i18n="nav-experience">Experience</a></li>
+            <li><a href="#education"  data-i18n="nav-education">Education</a></li>
+            <li><a href="#contact"    data-i18n="nav-contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-links-col">
-          <h4>Contact</h4>
+          <h4 data-i18n="footer-contact-title">Contact</h4>
           <ul>
             <li><a href="mailto:allouchemouloud06@gmail.com"><i class="fas fa-envelope"></i> allouchemouloud06@gmail.com</a></li>
             <li><a href="tel:+213673533631"><i class="fas fa-phone"></i> +213 673 533 631</a></li>
@@ -597,8 +655,8 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Mouloud Allouche. All rights reserved.</p>
-        <p>Food Quality Control &amp; Agro-Food Specialist</p>
+        <p data-i18n="footer-copyright">&copy; 2025 Mouloud Allouche. All rights reserved.</p>
+        <p data-i18n="footer-specialist">Food Quality Control &amp; Agro-Food Specialist</p>
       </div>
     </div>
   </footer>
